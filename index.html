@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroSoft Clone</title>
+    <link rel="SHORTCUT ICON" href="https://www.microsoft.com/favicon.ico?v2" type="image/x-icon" />
+    <link rel="stylesheet" href="./output.css">
+</head>
+
+<body>
+
+<!-- Nav-bar for smaller screens -->
+    
+    <div class="sm-container">
+
+        <div class="nav-bar flex justify-between h-12 px-4 py-3">
+
+            <!-- Left Section -->
+            <div class="left-sec flex space-x-4">
+                <span class="menu-bar">
+                    <img src="./images/3-hor-lines.png" id="menu-icon" class="cursor-pointer max-h-full"
+                        onclick="showMenu()" alt="menu-icon">
+
+                </span>
+                <a class="search-bar" href="#">
+                    <img src="./images/search-icon.png" class="max-h-full" alt="search-icon">
+                </a>
+            </div>
+
+            <!-- Middle Section -->
+            <div class="mid-sec">
+                <a href="#"><img src="./images/logo.png" class="max-h-full" alt="logo"></a>
+            </div>
+
+            <!-- Right Section -->
+            <div class="right-sec flex space-x-4">
+                <a href="#"><img src="./images/cart.png" alt="cart-icon" class="max-h-full"></a>
+                <a href="#"><img src="./images/sign-in.png" alt="sign-icon" class="max-h-full"></a>
+            </div>
+
+        </div>
+
+
+        <div class="menu-container text-sm not-clicked">
+            <ul>
+                <li class="menu-items"><a href="#">Microsoft 365</a></li>
+                <li class="menu-items"><a href="#">Teams</a>
+                <li class="menu-items"><a href="#">Windows</a>
+                <li class="menu-items"><a href="#">Surface</a>
+                <li class="menu-items"><a href="#">Xbox</a>
+                <li class="menu-items"><a href="#">Support</a></li>
+
+                <li onclick="showItems(0)" class="collapsed  menu-items">
+                    <span class="flex justify-between">
+                        <button>Software</button>
+                        <img src="./images/downArrow.png" class="h-3 arrow-icon" alt="up-arrow-icon">
+                    </span>
+
+                    <ul class="not-clicked utility-items">
+                        <li class="menu-down-items"><a href="#">Window Apps</a></li>
+                        <li class="menu-down-items"><a href="#">AI</a></li>
+                        <li class="menu-down-items"><a href="#">OneDrive</a></li>
+                        <li class="menu-down-items"><a href="#">Outlook</a></li>
+                        <li class="menu-down-items"><a href="#">Skype</a></li>
+                        <li class="menu-down-items"><a href="#">OneNote</a></li>
+                        <li class="menu-down-items"><a href="#">Microsoft Teams</a></li>
+                    </ul>
+                </li>
+                <li onclick="showItems(1)" class="collapsed menu-items">
+                    <span class="flex justify-between ">
+                        <button>PCs & Devices</button>
+                        <img src="./images/downArrow.png" class="h-3 arrow-icon" alt="up-arrow-icon">
+                    </span>
+                    <ul class="not-clicked utility-items">
+                        <li class="menu-down-items"><a href="#">Shop Xbox</a></li>
+                        <li class="menu-down-items"><a href="#">Accessories</a></li>
+                    </ul>
+                </li>
+                <li onclick="showItems(2)" class="collapsed menu-items">
+                    <span class="flex justify-between">
+                        <button>Entertainment</button>
+                        <img src="./images/downArrow.png" class="h-3 arrow-icon" alt="up-arrow-icon">
+                    </span>
+                    <ul class="not-clicked utility-items">
+                        <li class="menu-down-items"><a href="#">Xbox Game Pass Ultimate</a></li>
+                        <li class="menu-down-items"><a href="#">Xbox Live Gold</a></li>
+                        <li class="menu-down-items"><a href="#">Xbox games</a></li>
+                        <li class="menu-down-items"><a href="#">PC games</a></li>
+                        <li class="menu-down-items"><a href="#">Windows digital games</a></li>
+                    </ul>
+                </li>
+                <li onclick="showItems(3)" class="collapsed menu-items">
+                    <span class="flex justify-between">
+                        <button>Business</button>
+                        <img src="./images/downArrow.png" class="h-3 arrow-icon" alt="up-arrow-icon">
+                    </span>
+                    <ul class="not-clicked utility-items">
+                        <li class="menu-down-items"><a href="#">Microsoft Cloud</a></li>
+                        <li class="menu-down-items"><a href="#">Microsoft Security</a></li>
+                        <li class="menu-down-items"><a href="#">Azure</a></li>
+                        <li class="menu-down-items"><a href="#">Dynamic 365</a></li>
+                        <li class="menu-down-items"><a href="#">Microsoft 365 for business</a></li>
+                        <li class="menu-down-items"><a href="#">Microsoft Industry</a></li>
+                        <li class="menu-down-items"><a href="#">Microsoft Power Platform</a></li>
+                        <li class="menu-down-items"><a href="#">Windows 365</a></li>
+                    </ul>
+                </li>
+                <li onclick="showItems(4)" class="collapsed menu-items">
+                    <span class="flex justify-between">
+                        <button>Developer & IT</button>
+                        <img src="./images/downArrow.png" class="h-3 arrow-icon" alt="up-arrow-icon">
+                    </span>
+                    <ul class="not-clicked utility-items">
+                        <li class="menu-down-items"><a href="#">Developer Center</a></li>
+                        <li class="menu-down-items"><a href="#">Documentation</a></li>
+                        <li class="menu-down-items"><a href="#">Microsoft Learn</a></li>
+                        <li class="menu-down-items"><a href="#">Microsoft Tech Community</a></li>
+                        <li class="menu-down-items"><a href="#">Azure Marketplace</a></li>
+                        <li class="menu-down-items"><a href="#">AppSource</a></li>
+                        <li class="menu-down-items"><a href="#">Visual Studio</a></li>
+                    </ul>
+                </li>
+                <li onclick="showItems(5)" class="collapsed menu-items">
+                    <span class="flex justify-between">
+                        <button>Other</button>
+                        <img src="./images/downArrow.png" class="h-3 arrow-icon" alt="up-arrow-icon">
+                    </span>
+                    <ul class="not-clicked utility-items">
+                        <li class="menu-down-items"><a href="#">Free downloads & Security</a></li>
+                        <li class="menu-down-items"><a href="#">Education</a></li>
+                        <li class="menu-down-items"><a href="#">Gift Cards</a></li>
+                        <li class="menu-down-items"><a href="#">Licensing</a></li>
+                    </ul>
+                </li>
+                <li class="menu-items"><a href="#">View Sitemap</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+<!-- Nav-bar for large screens -->
+
+    <div class="lg-container">
+        
+        <div class="nav-bar flex justify-between px-[6%] my-4 text-[0.8rem] items-center">
+            <div class="left-sec flex space-x-5 items-center">
+                <img src="./images/logo.png" alt="microsoft-logo" class="logo h-[1.35rem]">
+                <div class="flex space-x-5">
+                    <button>Microsoft 365</button>
+                    <button>Teams</button>
+                    <button>Windows</button>
+                    <button>Surface</button>
+                    <button>Xbox</button>
+                    <button>Support</button>
+                    
+                </div>
+            </div>
+            <div class="right-sec flex space-x-5 ">
+                <span class="flex items-center menu-span" onclick="showMSMenu()">
+                    <button>All Microsoft</button>
+                    <img src="./images/downArrow.png" alt="down-arrow" class="h-3 mx-1">
+                </span>
+                <span class="flex items-center">
+                    <button class="hidden xl:block">Search</button>
+                    <img src="./images/search-icon.png" alt="search-icon" class="h-5 mx-1">
+                </span>
+                <span class="flex items-center">
+                    <button class="xl:block hidden">Cart</button>
+                    <img src="./images/cart.png" alt="cart-icon" class="h-5 mx-1">
+                </span>
+                <span class="flex items-center">
+                    <button class="hidden xl:block">Sign in</button>
+                    <img src="./images/sign-in.png" alt="Sign-icon" class="h-5 mx-1">
+                </span>
+            </div>
+        </div>
+
+        <div class="ms-container border-b-2 border-black not-clicked z-50">
+            <div class="flex justify-between text-[0.8rem] flex-wrap ms-menu">
+                <div class="flex flex-col items-start">
+                    <span class="font-semibold">Software</span>
+                    <button>Window Apps</button>
+                    <button>AI</button>
+                    <button>OneDrive</button>
+                    <button>Outlook</button>
+                    <button>Skype</button>
+                    <button>OneNote</button>
+                    <button>Microsoft Teams</button>
+                </div>
+                <div class="flex flex-col items-start">
+                    <span class="font-semibold">PC & Devices</span>
+                    <button>Shop Xbox</button>
+                    <button>Accessories</button> 
+                </div>
+                <div class="flex flex-col items-start">
+                    <span class="font-semibold">Entertainment</span>
+                    <button>Xbox Game Pass Ultimate</button>
+                    <button>Xbox Live Gold</button>
+                    <button>Xbox games</button>
+                    <button>PC games</button>
+                    <button>Windows digital games</button>
+                </div>
+                <div class="flex flex-col items-start">
+                    <span class="font-semibold">Business</span>
+                    <button>Microsoft Cloud</button>
+                    <button>Microsoft Security</button>
+                    <button>Azure</button>
+                    <button>Dynamic 365</button>
+                    <button>Microsoft 365 for business</button>
+                    <button>Microsoft Industry</button>
+                    <button>Microsoft Power Platform</button>
+                    <button>Windows 365</button>
+                </div>
+                <div class="flex flex-col items-start">
+                    <span class="font-semibold">Developer & IT</span>
+                    <button>Developer Center</button>
+                    <button>Documentation</button>
+                    <button>Microsoft Learn</button>
+                    <button>Microsoft Tech Community</button>
+                    <button>Azure Marketplace</button>
+                    <button>AppSource</button>
+                    <button>Visual Studio</button>
+                </div>
+                <div class="flex flex-col items-start">
+                    <span class="font-semibold">Other</span>
+                    <button>Free downloads & Security</button>
+                    <button>Education</button>
+                    <button>Gift Cards</button>
+                    <button>Licensing</button>
+                </div>
+            </div>
+            <div class="flex bg-gray-300 justify-center items-center mt-2">
+                <button class="text-sm p-2 cursor-pointer hover:underline underline-offset-2">VIEW SITEMAP</button>
+                <img src="./images/rightArrow.png" class="h-4"  alt="right-arrow">
+            </div>
+        </div>
+
+    </div>
+
+
+
+<!-- Slideshow for all screen sizes -->
+
+    <div class="slideshow-container m-[0.3rem]">
+
+        <div class="slides-box">
+            <!-- Slide 1 -->
+            <div class="slide-item" id="slide-1">
+                <div class="slide-img">
+                    <img class="full-img" src="./images/carousal-img-1.avif" alt="slide-1">
+                    <img class="half-img" src="./images/carousal-img-1-half.avif" alt="slide-1">
+                </div>
+                <div class="slide-detail flex flex-col space-y-4">
+                    <span class="text-[1.3rem] font-semibold">Surface Pro 9</span>
+                    <p class="text-[0.9rem]">Table versatility and laptop power - all in one ultra-portable device</p>
+                    <button class="p-3 text-[0.95rem] bg-blue-600 text-white font-semibold w-fit">Learn more</button>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide-item hidden" id="slide-2">
+                <div class="slide-img">
+                    <img class="full-img" src="./images/carousal-img-2.avif" alt="slide-2">
+                    <img class="half-img" src="./images/carousal-img-2-half.avif" alt="slide-2">
+                </div>
+                <div class="slide-detail flex flex-col space-y-4">
+                    <span class="text-[1.3rem] font-semibold">Microsoft 365</span>
+                    <p class="text-[0.9rem]">Turn your ideas into reality, stay safer online and off, and focus on what matters most with Microsoft 365 apps</p>
+                    <div class="flex flex-wrap">
+                        <button class="p-3 mr-4 text-[0.95rem] bg-blue-600 text-white font-semibold w-fit">For one person</button>
+                        <button class="py-3 text-[0.95rem] font-semibold w-fit text-blue-600">For up to six people &gt;</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-btn-box flex items-center space-x-7 justify-center py-8">
+            <button class="play-pause-btn"><img src="./images/pause-btn.avif" alt=""></button>
+            <button class="prev-btn" onclick="moveSlides(-1)"><img src="./images/rightArrow.png" alt="prev-button" class="rotate-180"></button>
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <button class="next-btn" onclick="moveSlides(1)"><img src="./images/rightArrow.png" alt="next-button"></button>
+        </div>
+    </div>
+
+
+<!-- Categories Section -->
+
+    <div class="categories-container p-10">
+        <div class="flex flex-wrap justify-center">
+            <div class="flex flex-col items-center p-5 ">
+                <img src="./images/window-icon.webp" class="w-10" alt="image-here">
+                <span class="text-blue-600 font-semibold underline cursor-pointer text-center">Choose your Microsoft 365</span>
+            </div>
+            <div class="flex flex-col items-center p-5">
+                <img src="./images/surface-icon.webp" class="w-10" alt="image-here">
+                <span class="text-blue-600 font-semibold underline cursor-pointer text-center">Explore Surface devices</span>
+            </div>
+            <div class="flex flex-col items-center p-5">
+                <img src="./images/xbox-icon.webp" class="w-10" alt="image-here">
+                <span class="text-blue-600 font-semibold underline cursor-pointer text-center">Buy Xbox games and consoles</span>
+            </div>
+            <div class="flex flex-col items-center p-5">
+                <img src="./images/window-icon.webp" class="w-10" alt="image-here">
+                <span class="text-blue-600 font-semibold underline cursor-pointer text-center">Get Windows 11</span>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- Demo Section -->
+
+    <div class="demo-container lg:p-[4%]">
+        <div class="flex flex-wrap">
+            <div class="flex flex-col px-3 py-5 w-full sm:w-1/2 md:w-1/2 lg:w-1/4 space-y-5 items-start">
+                <img src="./images/surface-laptop.webp" class="w-full" alt="image-here">
+                <span class="text-2xl font-semibold">Surface Laptop 5</span>
+                <p class="text-[0.92rem]">Sophisticated style and multitasking speed powered by 12th Gen Intel Core, with Windows 11.</p>
+                <button class="text-blue-600 font-semibold">Learn more &gt;</button>
+            </div>
+            <div class="flex flex-col px-3 py-5 w-full sm:w-1/2 md:w-1/2 lg:w-1/4 space-y-5 items-start">
+                <img src="./images/xbox-s.webp"  class="w-full" alt="image-here">
+                <span class="text-2xl font-semibold">Xbox Series S</span>
+                <p class="text-[0.92rem]">Next-gen performance in the smallest Xbox ever.</p>
+                <button class="text-blue-600 font-semibold">Shop Xbox Series S &gt;</button>
+            </div>
+            <div class="flex flex-col px-3 py-5 w-full  sm:w-1/2 md:w-1/2 lg:w-1/4 space-y-5 items-start">
+                <img src="./images/bing-ai.avif"  class="w-full" alt="image-here">
+                <span class="text-2xl font-semibold">Announcing the next wave of AI innovation</span>
+                <p class="text-[0.92rem]">The new Microsoft Bing and Edge will soon feature more visual search responses, chat history, and persistent chat within Edge. We're also adding actions to help people complete tasks.</p>
+                <button class="text-blue-600 font-semibold">Learn more about it &gt;</button>
+            </div>
+            <div class="flex flex-col px-3 py-5 w-full  sm:w-1/2  md:w-1/2 lg:w-1/4 space-y-5 items-start">
+                <img src="./images/xbox-ultimate.avif"  class="w-full" alt="image-here">
+                <span class="text-2xl font-semibold">Xbox Game Pass Ultimate</span>
+                <p class="text-[0.92rem]">Xbox Live Gold and hundreds of high-quality console and PC games. Play together with friends and discover your next favourite game.</p>
+                <button class="text-blue-600 font-semibold ">Join now &gt;</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- PC-Check Section -->
+
+    <div class="pc-check-container p-3 lg:px-[5%]">
+        <div class="image-item w-full">
+            <img src="./images/pc-check-half.avif" alt="pc check image" class="pc-half-img w-full">
+            <img src="./images/pc-check.jpeg" alt="pc check image" class="pc-full-img w-full">
+        </div>
+        <div class="image-info flex flex-col space-y-5">
+            <span class="text-[1.3rem] font-semibold">Designed for life today - and tomorrow</span>
+            <p class="text-[0.92rem]">The next-generation of games. Your goals. Friends and family. Windows 11 was made to bring you closer to everything you love.</p>
+            <button class="text-[0.95rem] bg-blue-600 text-white w-fit py-2 px-3 font-semibold">See if your PC is ready</button>
+        </div>
+    </div>
+
+
+<!-- Business Products Section -->
+
+    <div class="business-products-container lg:p-[4%]">
+        <span class="text-xl md:text-2xl lg:text-4xl font-semibold px-3">For business</span>
+        <div class="flex flex-wrap">
+            <div class="flex flex-col px-3 py-5 w-full sm:w-1/2 md:w-1/2 lg:w-1/4 space-y-5 items-start">
+                <img src="./images/business-1.avif" class="w-full" alt="image-here">
+                <span class="text-2xl font-semibold">Surface for Business</span>
+                <p class="text-[0.92rem]">No matter what you do, there's a Surface to help you do it.</p>
+                <button class="text-blue-600 font-semibold">Shop now &gt;</button>
+            </div>
+            <div class="flex flex-col px-3 py-5 w-full sm:w-1/2 md:w-1/2 lg:w-1/4 space-y-5 items-start">
+                <img src="./images/business-2.webp"  class="w-full" alt="image-here">
+                <span class="text-2xl font-semibold">Try Microsoft 365 for free</span>
+                <p class="text-[0.92rem]">Get Microsoft Teams, secure cloud storage and premium apps across devices with a free one-month Microsoft 365 Business Standard trial.</p>
+                <button class="text-blue-600 font-semibold">Start you free trial &gt;</button>
+            </div>
+            <div class="flex flex-col px-3 py-5 w-full sm:w-1/2 md:w-1/2 lg:w-1/4 space-y-5 items-start">
+                <img src="./images/business-3.webp"  class="w-full" alt="image-here">
+                <span class="text-2xl font-semibold">Welcome to your Windows 365 Cloud PC</span>
+                <p class="text-[0.92rem]">Securely stream your Windows experience from the Microsoft cloud to any device.</p>
+                <button class="text-blue-600 font-semibold">Get it today &gt;</button>
+            </div>
+            <div class="flex flex-col px-3 py-5 w-full sm:w-1/2  md:w-1/2 lg:w-1/4 space-y-5 items-start">
+                <img src="./images/business-4.jpeg"  class="w-full" alt="image-here">
+                <span class="text-2xl font-semibold">Windows 11 for business</span>
+                <p class="text-[0.92rem]">Designed for hybrid work. Powerful for employees. Consistent for IT Secure for all.</p>
+                <button class="text-blue-600 font-semibold ">Learn More &gt;</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Contacts Section -->
+
+    <div class="contact-container flex px-[3%] lg:px-[5%] my-[3rem] lg:my-[2rem] items-center flex-wrap justify-start">
+        <span class="lg:text-lg">Follow Microsoft</span>
+        <span class="flex space-x-4 h-8 m-3">
+            <img class="h-full" src="./images/facebook-icon.avif" alt="fb-icon">
+            <img class="h-full" src="./images/twitter-icon.webp" alt="twitter-icon">
+            <img class="h-full" src="./images/youtube-icon.webp" alt="youtube-icon">
+        </span>
+    </div>
+
+
+<!-- Footer Section -->
+
+    <div class="footer-container px-[5%] py-[2%]">
+        <div class="links-container flex flex-wrap w-full">
+            <div class="flex flex-col items-start w-full sm:w-1/3 md:w-1/3 lg:w-1/6 space-y-5 text-[0.65rem] py-5">
+                <span class="font-semibold">What's new</span>
+                <button>Microsoft 365</button>
+                <button>Games</button>
+                <button>Surface Pro 9</button>
+                <button>Surface Laptop 5</button>
+                <button>Surface Lapto Studio</button>
+                <button>Surface Laptop Go 2</button>
+                <button>Windows 11 apps</button>
+            </div>
+            <div class="flex flex-col items-start w-full sm:w-1/3 md:w-1/3 lg:w-1/6 space-y-5 text-[0.65rem] py-5">
+                <span class="font-semibold">Microsoft Store</span>
+                <button>Account profile</button>
+                <button>Download Center</button> 
+                <button>MicroSoft Store Support</button>
+                <button>Returns</button>
+                <button>Order tracking</button>
+            </div>
+            <div class="flex flex-col items-start w-full sm:w-1/3 md:w-1/3 lg:w-1/6 space-y-5 text-[0.65rem] py-5">
+                <span class="font-semibold">Education</span>
+                <button>MicroSoft in education</button>
+                <button>Devices for education</button>
+                <button>Microsoft Teams for Education</button>
+                <button>MicroSoft 365 Education</button>
+                <button>Office Education</button>
+                <button>Educator training adn development</button>
+                <button>Deals for students and parents</button>
+                <button>Azure for students</button>
+            </div>
+            <div class="flex flex-col items-start w-full sm:w-1/3 md:w-1/3 lg:w-1/6 space-y-5 text-[0.65rem] py-5">
+                <span class="font-semibold">Business</span>
+                <button>Microsoft Cloud</button>
+                <button>Microsoft Security</button>
+                <button>Azure</button>
+                <button>Dynamic 365</button>
+                <button>Microsoft 365</button>
+                <button>Microsoft Advertising</button>
+                <button>Microsoft Industry</button>
+                <button>Microsoft Teams</button>
+                
+            </div>
+            <div class="flex flex-col items-start w-full sm:w-1/3 md:w-1/3 lg:w-1/6 space-y-5 text-[0.65rem] py-5">
+                <span class="font-semibold">Developer & IT</span>
+                <button>Developer Center</button>
+                <button>Documentation</button>
+                <button>Microsoft Learn</button>
+                <button>Microsoft Tech Community</button>
+                <button>Azure Marketplace</button>
+                <button>AppSource</button>
+                <button>Microsoft Power Platform</button>
+                <button>Visual Studio</button>
+            </div>
+            <div class="flex flex-col items-start w-full sm:w-1/3 md:w-1/3 lg:w-1/6 space-y-6 text-[0.65rem] py-5">
+                <span class="font-semibold">Company</span>
+                <button>Careers</button>
+                <button>About Microsoft</button>
+                <button>Company news</button>
+                <button>Privacy at Microsoft</button>
+                <button>Investors</button>
+                <button>Security</button>
+                <button>Sustainability</button>
+            </div>
+        </div>
+        <div class="footer-bar flex justify-end">
+            <div class="left-sec">
+
+            </div>
+            <div class="right-sec flex space-x-5 text-xs mt-8 flex-wrap justify-end">
+                <p class="cursor-pointer hover:underline underline-offset-2">Contact MicroSoft</p>
+                <p class="cursor-pointer hover:underline underline-offset-2">Privacy</p>
+                <p class="cursor-pointer hover:underline underline-offset-2">Terms of use</p>
+                <p class="cursor-pointer hover:underline underline-offset-2">Trademarks</p>
+                <p class="cursor-pointer hover:underline underline-offset-2">About our ads</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
